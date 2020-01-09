@@ -67,4 +67,11 @@ public class Sessao {
 
 	}
 
+	@Override
+	public String toString() {
+		return "Sessao [id=" + id + ", horario=" + horario + ", sala=" + sala + ", filme=" + filme + "]";
+	}
+	
+	
+
 }

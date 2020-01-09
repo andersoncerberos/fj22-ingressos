@@ -23,7 +23,7 @@
             <tbody>
             <c:forEach var="sessao" items="${sessoes}">
                 <tr>
-                    <td>${sessao.horario}</td>
+                    <td> ${sessao.horario}</td>
                     <td>${sessao.filme.nome}</td>
                     <td>${sessao.filme.duracao.toMinutes()}</td>
 <%--                     <td>${sessao.preco}</td> --%>

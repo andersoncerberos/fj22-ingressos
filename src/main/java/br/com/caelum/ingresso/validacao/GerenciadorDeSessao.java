@@ -19,6 +19,7 @@ public class GerenciadorDeSessao {
 	public boolean cabe(Sessao sessaoNova) {
 
 		if (terminaAmanha(sessaoNova)) {
+			System.out.println("termina amanha");
 			return false;
 		}
 		return sessoesDaSala.stream().noneMatch(sessaoExistente -> horarioIsConfltante(sessaoExistente, sessaoNova));
@@ -49,9 +50,10 @@ public class GerenciadorDeSessao {
 		boolean sessaoNovaComecaDepoisDaExistente = terminoSessaoExistente.isBefore(inicioSessaoNova);
 
 		if (sessaoNovaTerminaAntesDaExistente || sessaoNovaComecaDepoisDaExistente) {
+			System.out.println("horarioIsConfltante false");
 			return false;
-
 		}
+		System.out.println("horarioIsConfltante true");
 		return true;
 	}
 
