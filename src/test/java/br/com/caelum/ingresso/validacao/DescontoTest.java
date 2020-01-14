@@ -21,13 +21,14 @@ public class DescontoTest {
 	private Sala sala;
 	private Filme filme;
 	private Sessao sessao;
+
 // desafio do capitulo 3 execicio 3.6 numero 3 para não aaver repetição de codigo
 	@Before
 	public void requisitoParaOsTestes() {
 
-		Sala sala = new Sala("Eldoado - IMax", new BigDecimal("20.5"));
-		Filme filme = new Filme("Rogue One", Duration.ofMinutes(120), "SCI-fi", new BigDecimal("12"));
-		Sessao sessao = new Sessao(LocalTime.parse("10:00:00"), filme, sala);
+		sala = new Sala("Eldoado - IMax", new BigDecimal("20.5"));
+		filme = new Filme("Rogue One", Duration.ofMinutes(120), "SCI-fi", new BigDecimal("12"));
+		sessao = new Sessao(LocalTime.parse("10:00:00"), filme, sala);
 
 	}
 
