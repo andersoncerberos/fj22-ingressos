@@ -10,10 +10,14 @@ public class DescontoParaBancos implements Desconto {
 		return precoOrigem.subtract(TrintaPorCentoSobre(precoOrigem));
 	}
 
-	
 	public BigDecimal TrintaPorCentoSobre(BigDecimal precoOrigem) {
 
 		return precoOrigem.multiply(new BigDecimal("0.3"));
+	}
+
+	public String getDescricao() {
+
+		return "Desconto Banco";
 	}
 
 }
